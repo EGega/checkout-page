@@ -1,0 +1,21 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+//abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+//base
+@import 'base/reset';
+
+//components
+@import 'components/header';
+@import 'components/cart';
+@import 'components/shipping-form';
+
+//pages
+@import 'pages/checkout-page';
+
+body {
+    font-family: $font-family;
+}

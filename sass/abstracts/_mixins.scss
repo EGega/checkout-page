@@ -1,0 +1,11 @@
+@mixin singleProduct($width) {
+    width: $width;
+    border: $thin-border;
+    text-align: center;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+}
+
+@mixin Image($width) {
+    width: $width;
+}
