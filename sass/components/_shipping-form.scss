@@ -1,59 +1,13 @@
-.left-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 25vw;
-    .form-group{
-        margin-top: 1rem;
-    }
-    .country{
-        width: 25vh;
-    }
-    .button{
-        text-align: right;
-        button{
-            background-color: #f2994a;
-            border-radius: 0.7rem;
-            padding: 1rem 0;
-            color: #fff;
-            font-weight: 600;
-            border: none;
-            min-width: 25%;
-            &:hover{
-                background-color: #f2c94c;
-                cursor: pointer;
-                transition: ease-in-out 0.3s;
-            }
-        }
-    }
-    .side-by-side{
-        display: flex;
-        justify-content: space-between;
-        gap: 0.7rem;
-        .form-group{
-            width: 100%;
-        }
-    }
+.side-by-side {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.7rem;
+  .country {
+    width: 25vh;
+  }
 }
 
-.form-group{
-    .input-field{
-        position: relative;
-        i{
-            position: absolute;
-            color: $font-color;
-            font-size: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 3%;
-        }
-        input, select{
-            border: 1px solid $font-color;
-            padding: 0.5rem 0.4rem 0.5rem 2rem;
-            color: $font-color;
-            font-size: 1rem;
-            border-radius: 0.3rem;
-            width: 100%;
-        }
-    }
+.form-group {
+    margin-top: $regular-margin;
+    width: 100%;
 }

@@ -12,9 +12,16 @@
 @import 'components/header';
 @import 'components/cart';
 @import 'components/shipping-form';
+@import 'components/button';
+@import 'components/price-total';
+@import 'components/input-field';
+@import 'components/cart-item';
 
 //pages
-@import 'pages/checkout-page';
+@import 'containers/containers';
+
+//responsive
+@import 'components/responsive';
 
 body {
     font-family: $font-family;

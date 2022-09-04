@@ -1,65 +1,10 @@
-.right-container{
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-    .cart{
-        background-color: $cart-background;
-        padding:2rem;
-        border-radius: 1rem;
-        .total-price{
-            border-top: $thin-border;
-            margin-top: 1rem;
-            display: flex;
-            justify-content: space-between;
-        }
-        h2{
-            font-size: 1rem;
-            color: $heading-color;
-        }
-        .cart-item{
-            display: flex;
-            width: 25vw;
-            img{
-                @include Image(5vw);
-                border-radius: 1rem;
-            }
-            .price{
-                padding: 0.5rem;
-                .overline{
-                    text-decoration: line-through;
-                    color: #4E5150;
-                    font-size: 1rem;
-                }
-                .orange{
-                    font-size: 1.4rem;
-                    color: #f2994a;
-                    font-weight: 600;
-                }
-                .counter{
-                    display: flex;
-                    justify-content: space-between;
-                    margin-top: 1.2rem;
-                    @include singleProduct(5vw);
-                    button{
-                       border: none;
-                       background-color: lightgrey;
-                       padding: 0.2rem;
-                       border-radius: 0.2rem;
-                       &:hover{
-                        background-color: grey;
-                        cursor: pointer;
-                       }
-                    }
-                    .number{
-                        font-size: 0.9rem;
-                        line-height: 1.5rem;
-                    }
-                }
-            }
-            &:nth-child(2){
-                margin-top: 1rem;
-            }
-        }
-    }
-    
+.cart {
+  background-color: $cart-background;
+  padding: 2rem;
+  border-radius: $regular-border-size;
+
+  h2 {
+    font-size: $regular-font-size;
+    color: $heading-color;
+  }
 }
