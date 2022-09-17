@@ -1,6 +1,7 @@
 .cart-item {
   display: flex;
   width: 25vw;
+  margin-top: 10px;
   img {
     @include Image(6vw);
     border-radius: $regular-border-size;
@@ -38,7 +39,9 @@
       }
     }
   }
-  &:nth-child(2) {
+  
+  .p-total {
     margin-top: $regular-margin;
+    font-size: 20px;
   }
 }

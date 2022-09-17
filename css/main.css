@@ -52,6 +52,21 @@
   transition: ease-in-out 0.3s;
 }
 
+.remove {
+  margin-top: 10px;
+  background-color: rgb(223, 136, 37);
+  color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+
+.remove:hover {
+  background-color: rgb(158, 84, 0);
+}
+
 .total-price {
   border-top: 0.1rem solid rgb(136, 136, 136);
   margin-top: 1rem;
@@ -83,6 +98,7 @@
 .cart-item {
   display: flex;
   width: 25vw;
+  margin-top: 10px;
 }
 .cart-item img {
   width: 6vw;
@@ -125,8 +141,9 @@
   font-size: 0.9rem;
   line-height: 1.5rem;
 }
-.cart-item:nth-child(2) {
+.cart-item .p-total {
   margin-top: 1rem;
+  font-size: 20px;
 }
 
 .main-container {
