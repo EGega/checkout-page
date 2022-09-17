@@ -21,7 +21,26 @@ removeBtn.forEach((btn) => {
 });
 
 
-console.log(vat.innerText);
+
+// Ekleme 
+const doubleAdd = () => {
+  salePrice.forEach((sale) => {
+    sale.innerText = "Hello";
+  })
+}
+
+plusBtn.forEach((plus) => {
+  plus.addEventListener("click", (e) => { 
+   
+  })
+})
+
+//   e.target.parentElement.parentElement.parentElement.children[1].innerHTML = `$ <span class="orange-span">54.99</span>`
+  //  let salePriceValue = e.target.parentElement.parentElement.parentElement.children[1].lastChild.innerText;
+  //  e.target.parentElement.parentElement.parentElement.children[1].innerHTML = `$ <span class="orange-span">${salePriceValue *= 2 }</span>`
+   // console.log(salePriceValue);
+
+
 
     
 
