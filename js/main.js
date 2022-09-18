@@ -11,7 +11,7 @@ const pTotal = document.querySelectorAll(".p-total")
 const subTotal = document.querySelector("#subtotal")
 const vat = document.getElementById("vat")
 const shipping = document.getElementById("shipping")
-const sumPrice = document.getElementById("sum-price")
+const overAllTotal = document.getElementById("sum-price")
 
 // RemoveBtn Function
 
@@ -23,29 +23,10 @@ removeBtn.forEach((btn) => {
 
 
 
-// Ekleme 
-// const doubleAdd = () => {
-//   salePrice.forEach((sale) => {
-//     sale.innerText = "Hello";
-//   })
-// }
-// let saleNum = nu 
-
-// plusBtn.forEach((btn, index) => {
-
-//   btn.addEventListener("click", () => {
-//       number[index].innerHTML = (parseInt(number[index].innerHTML) + 1);
-       
-//       saleNum = parseFloat(salePrice[index].innerHTML)
-
-//       salePrice[index].innerHTML = (parseFloat(salePrice[index].innerHTML) + saleNum).toFixed(2);
-
-//       originalPrice[index].innerHTML = (parseFloat(originalPrice[index].innerHTML) + parseFloat(originalPrice[index].innerHTML)).toFixed(2);
-//   })
-// }
-// )
-
 let totalArr = []
+let vatNum = null;
+let subTotalNum = null
+let totalOverall = null
 
 plusBtn.forEach((btn, i) => {
   // Artan Değer
@@ -73,23 +54,21 @@ plusBtn.forEach((btn, i) => {
     console.log(totalArr);
 
     // Subtotal 
-    subTotal.innerHTML = totalArr.map((str) => Number(str)).reduce((acc, el) => acc + el).toFixed(2)
+    subTotalNum = totalArr.map((str) => Number(str)).reduce((acc, el) => acc + el).toFixed(2)
+    subTotal.innerHTML = subTotalNum;
+
+    // Vat
+
+    vatNum = subTotalNum * 0.18;
+    vat.innerHTML = vatNum.toFixed();
+    // OverallTotal
+    totalOverall = (Number(subTotalNum) + vatNum + 19);
+    console.log(totalOverall);
+    overAllTotal.innerHTML = totalOverall.toFixed(2);
   })
 })
 
 
     
 
-// plusBtn.forEach((btn, index) => {
-//   btn.addEventListener("click", () => (plusButtonHandler(index)))
-// }
-// )
-
-// const plusButtonHandler = (index) => {
-//   saleNumber = parseFloat(salePrice[index].innerHTML);
-//   originaNumber = parseFloat(originalPrice[index].innerHTML);
-//   number[index].innerHTML = (parseInt(number[index].innerHTML) + 1);
-//   salePrice[index].innerHTML = (parseFloat(salePrice[index].innerHTML) + saleNumber).toFixed(2);
-//   originalPrice[index].innerHTML = (parseFloat(originalPrice[index].innerHTML) + originaNumber).toFixed(2);
-// }
 
