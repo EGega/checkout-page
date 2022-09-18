@@ -5,9 +5,10 @@ const salePrice = document.querySelectorAll(".orange-span");
 const originalPrice = document.querySelectorAll(".overline-span");
 const cartItem = document.querySelectorAll(".cart-item");
 const number = document.querySelectorAll(".number")
+const pTotal = document.querySelectorAll(".p-total")
 
 // ALT Selectorlar
-const subTotal = document.querySelector("subtotal")
+const subTotal = document.querySelector("#subtotal")
 const vat = document.getElementById("vat")
 const shipping = document.getElementById("shipping")
 const sumPrice = document.getElementById("sum-price")
@@ -44,21 +45,39 @@ removeBtn.forEach((btn) => {
 // }
 // )
 
-
+let totalArr = []
 
 plusBtn.forEach((btn, i) => {
+  // Artan Değer
   let saleNum = Number(salePrice[i].innerHTML);
   const saleNumCopy = saleNum
   let orgNum = Number(originalPrice[i].innerHTML);
   const orgCopy = orgNum
+  
+  let totalP = pTotal[i].innerHTML;
+  let totalPcopy = totalP;
+
+  // Event
   btn.addEventListener("click", () => {
     number[i].innerHTML = (parseInt(number[i].innerHTML) + 1);
     saleNum += saleNumCopy
-    salePrice[i].innerHTML = saleNum
+    salePrice[i].innerHTML = saleNum.toFixed(2)
     orgNum += orgCopy
-    originalPrice[i].innerHTML = orgNum
+    originalPrice[i].innerHTML = orgNum.toFixed(2)
+
+    // Total
+   
+    totalP = `${saleNum.toFixed(2)}`
+    pTotal[i].innerHTML = saleNum.toFixed(2)
+    totalArr.push((Number(totalP).toFixed(2)))
+    console.log(totalArr);
+
+    // Subtotal 
+    subTotal.innerHTML = totalArr.map((str) => Number(str)).reduce((acc, el) => acc + el).toFixed(2)
   })
 })
+
+
     
 
 // plusBtn.forEach((btn, index) => {
