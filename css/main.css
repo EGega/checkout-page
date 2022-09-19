@@ -141,7 +141,7 @@
   font-size: 0.9rem;
   line-height: 1.5rem;
 }
-.cart-item .p-total {
+.cart-item .sp-total {
   margin-top: 1rem;
   font-size: 20px;
 }
@@ -284,13 +284,13 @@
     min-width: 50%;
   }
   .main-container .mid-container .right-container {
-    width: 20%;
+    width: 30%;
   }
   .main-container .mid-container .right-container .cart-item {
     width: 100%;
   }
   .main-container .mid-container .right-container .cart-item img {
-    width: 6vw;
+    width: 10vw;
   }
   .main-container .mid-container .right-container .cart-item .price .counter {
     width: 6vw;
@@ -298,6 +298,23 @@
 }
 body {
   font-family: "Montserrat", sans-serif;
+  background: white;
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: cover;
+}
+
+.loader {
+  display: absolute;
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=main.css.map */

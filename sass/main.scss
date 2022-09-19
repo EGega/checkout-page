@@ -25,4 +25,20 @@
 
 body {
     font-family: $font-family;
+    background: white;
+    z-index: 10;
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: cover;
+}
+.loader {
+display: absolute;
+background-color: white;
+position: absolute;
+width: 100%;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 10;
 }

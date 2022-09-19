@@ -12,12 +12,17 @@ const subTotal = document.querySelector("#subtotal")
 const vat = document.getElementById("vat")
 const shipping = document.getElementById("shipping")
 const overAllTotal = document.getElementById("sum-price")
+const loader = document.querySelector(".loader")
 
 // RemoveBtn Function
 
 
 
-
+window.addEventListener('load',() => {
+ setTimeout(()=> {
+loader.style.display = "none"
+ }, 500)
+})
 
 
 
@@ -34,20 +39,25 @@ let totalOverall = null
 
 
 removeBtn.forEach((btn, i) => {
+  let saleNum = Number(salePrice[i].innerHTML);
   btn.addEventListener("click", () => {
-     btn.parentElement.parentElement.remove()
-     let saleNum = Number(salePrice[i].innerHTML);
-  saleNumCopy = saleNum
-  initialSalesArr.push(saleNum)
-  console.log(initialSalesArr);
-  let orgNum = Number(originalPrice[i].innerHTML);
-  orgCopy = orgNum
-  
+    btn.parentElement.parentElement.remove()
   // subtotal
-  subTotal.innerHTML = subTotalNum
-  console.log(subTotalNum);
-  subTotalNum = subTotalNum - saleNum;
-   subTotal.innerHTML = subTotalNum.toFixed(2);
+  subTotalNum = subTotalNum - saleNum
+          console.log(subTotalNum);
+    
+          subTotal.innerHTML = subTotalNum.toFixed(2);
+
+    // Vat
+
+    vatNum = subTotalNum * 0.18;
+    vat.innerHTML = vatNum.toFixed(2);
+    // OverallTotal
+    totalOverall = (Number(subTotalNum) + vatNum + 19);
+    console.log(totalOverall);
+    overAllTotal.innerHTML = totalOverall.toFixed(2);
+
+   
   });
 });
 

@@ -135,11 +135,11 @@
         }
       }
       .right-container {
-        width: 20%;
+        width: 30%;
         .cart-item {
           width: 100%;
           img {
-            @include Image(6vw);
+            @include Image(10vw);
           }
           .price {
             .counter {
