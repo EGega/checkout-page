@@ -16,6 +16,7 @@ const loader = document.querySelector(".loader")
 
 const rightContainer = document.querySelector(".right-container");
 const closeTheCard = document.querySelector(".close-card")
+const mainContainer = document.querySelector(".main-container")
 
 // RemoveBtn Function
 
@@ -24,6 +25,7 @@ const closeTheCard = document.querySelector(".close-card")
 window.addEventListener('load',() => {
  setTimeout(()=> {
 loader.style.display = "none"
+mainContainer.style.display  = "block"
  }, 500)
 })
 
