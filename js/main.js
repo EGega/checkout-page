@@ -68,7 +68,8 @@ removeBtn.forEach((btn, i) => {
     console.log(subTotal.innerHTML === -0.00);
     if(subTotal.innerHTML === "-0.00") {
       vat.innerHTML = 0;
-      overAllTotal.innerHTML = 0
+      overAllTotal.innerHTML = 0;
+      shipping.innerHTML = 0;
     }
    
   });
@@ -168,7 +169,8 @@ minusBtn.forEach((btn, i) => {
 
     if(subTotal.innerHTML === "-0.00") {
       vat.innerHTML = 0;
-      overAllTotal.innerHTML = 0
+      overAllTotal.innerHTML = 0;
+      shipping.innerHTML = 0;
     }
           
     } 
