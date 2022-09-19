@@ -67,6 +67,21 @@
   background-color: rgb(158, 84, 0);
 }
 
+.close-card {
+  margin-top: 10px;
+  background-color: rgb(223, 136, 37);
+  color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+
+.close-card:hover {
+  background-color: rgb(158, 84, 0);
+}
+
 .total-price {
   border-top: 0.1rem solid rgb(136, 136, 136);
   margin-top: 1rem;

@@ -14,6 +14,9 @@ const shipping = document.getElementById("shipping")
 const overAllTotal = document.getElementById("sum-price")
 const loader = document.querySelector(".loader")
 
+const rightContainer = document.querySelector(".right-container");
+const closeTheCard = document.querySelector(".close-card")
+
 // RemoveBtn Function
 
 
@@ -38,8 +41,9 @@ let vatNum = null;
 let subTotalNum = null
 let totalOverall = null
 
-
-
+closeTheCard.addEventListener("click", () => {
+  rightContainer.style.display = "none"
+})
 
 removeBtn.forEach((btn, i) => {
   let saleNum = Number(salePrice[i].innerHTML);
@@ -47,7 +51,7 @@ removeBtn.forEach((btn, i) => {
     btn.parentElement.parentElement.remove()
   // subtotal
   subTotalNum = subTotalNum - Number(salePrice[i].innerHTML)
-          console.log(saleNumBackUp);
+          
     
           subTotal.innerHTML = subTotalNum.toFixed(2);
 
@@ -59,10 +63,16 @@ removeBtn.forEach((btn, i) => {
     totalOverall = (Number(subTotalNum) + vatNum + 19);
     console.log(totalOverall);
     overAllTotal.innerHTML = totalOverall.toFixed(2);
-
+    console.log(subTotal.innerHTML === -0.00);
+    if(subTotal.innerHTML === "-0.00") {
+      vat.innerHTML = 0;
+      overAllTotal.innerHTML = 0
+    }
    
   });
+  
 });
+
 
 
 
@@ -189,6 +199,8 @@ minusBtn.forEach((btn, i) => {
     
   })
 })
+
+
 
 
     
