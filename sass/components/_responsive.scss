@@ -107,9 +107,9 @@
       .right-container {
         width: 50%;
         .cart-item {
-          width: 30vw;
+          width: 50vw;
           img {
-            @include Image(10vw);
+            @include Image(15vw);
           }
           .price {
             .counter {

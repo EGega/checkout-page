@@ -30,6 +30,7 @@ let totalArr = [];
 let newTotal = [];
 let initialSalesArr = [];
 let saleNumCopy = null;
+let saleNumBackUp = null
 let saleNumArr = [];
 let orgCopy = null;
 let orgArr = [];
@@ -38,13 +39,15 @@ let subTotalNum = null
 let totalOverall = null
 
 
+
+
 removeBtn.forEach((btn, i) => {
   let saleNum = Number(salePrice[i].innerHTML);
   btn.addEventListener("click", () => {
     btn.parentElement.parentElement.remove()
   // subtotal
-  subTotalNum = subTotalNum - saleNum
-          console.log(subTotalNum);
+  subTotalNum = subTotalNum - Number(salePrice[i].innerHTML)
+          console.log(saleNumBackUp);
     
           subTotal.innerHTML = subTotalNum.toFixed(2);
 
@@ -89,6 +92,7 @@ plusBtn.forEach((btn, i) => {
     saleNum += saleNumCopy
     salePrice[i].innerHTML = saleNum.toFixed(2)
     saleNumArr.push(saleNum)
+    saleNumBackUp = saleNum
     orgNum += orgCopy
     originalPrice[i].innerHTML = orgNum.toFixed(2)
     orgArr.push(orgNum)
@@ -154,6 +158,7 @@ minusBtn.forEach((btn, i) => {
     else {
       saleNum = saleNumArr[saleNumArr.length - 1] - saleNumCopy;
       saleNumArr.push(saleNum)
+      saleNumBackUp = saleNum
       salePrice[i].innerHTML = saleNum.toFixed(2)
       orgNum = orgArr[orgArr.length - 1] - orgCopy;
       orgArr.push(orgNum)
@@ -168,7 +173,7 @@ minusBtn.forEach((btn, i) => {
       
       subTotalNum = subTotalNum - saleNumCopy
     console.log(subTotalNum);
-    // subTotalNum = totalArr.map((str) => Number(str)).reduce((acc, el) => acc + el).toFixed(2)
+  
     subTotal.innerHTML = subTotalNum.toFixed(2);
 
     // Vat
