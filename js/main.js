@@ -165,6 +165,11 @@ minusBtn.forEach((btn, i) => {
     totalOverall = (Number(subTotalNum) + vatNum + 19);
     console.log(totalOverall);
     overAllTotal.innerHTML = totalOverall.toFixed(2);
+
+    if(subTotal.innerHTML === "-0.00") {
+      vat.innerHTML = 0;
+      overAllTotal.innerHTML = 0
+    }
           
     } 
     else {
